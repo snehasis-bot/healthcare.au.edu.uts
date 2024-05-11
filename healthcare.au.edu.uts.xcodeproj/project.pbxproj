@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0150D8B12BEF294500024CBB /* HealthCareDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0150D8AF2BEF294500024CBB /* HealthCareDataModel.xcdatamodeld */; };
+		0150D8B32BEF58A900024CBB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150D8B22BEF58A900024CBB /* HomeView.swift */; };
 		92A7C75A2BEE3BB30052A4B7 /* HealthCareDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7C7592BEE3BB30052A4B7 /* HealthCareDataViewModel.swift */; };
 		92A7C75C2BEE46620052A4B7 /* BookAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7C75B2BEE46620052A4B7 /* BookAppointmentView.swift */; };
 		92F68C472BE9DE1D009D6F94 /* healthcare_au_edu_utsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F68C462BE9DE1D009D6F94 /* healthcare_au_edu_utsApp.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		0150D8B02BEF294500024CBB /* HealthCareDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HealthCareDataModel.xcdatamodel; sourceTree = "<group>"; };
+		0150D8B22BEF58A900024CBB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		92A7C7592BEE3BB30052A4B7 /* HealthCareDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCareDataViewModel.swift; sourceTree = "<group>"; };
 		92A7C75B2BEE46620052A4B7 /* BookAppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAppointmentView.swift; sourceTree = "<group>"; };
 		92F68C432BE9DE1D009D6F94 /* healthcare.au.edu.uts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = healthcare.au.edu.uts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,7 @@
 			children = (
 				92F68C462BE9DE1D009D6F94 /* healthcare_au_edu_utsApp.swift */,
 				92F68C482BE9DE1D009D6F94 /* ContentView.swift */,
+				0150D8B22BEF58A900024CBB /* HomeView.swift */,
 				92F68C4A2BE9DE21009D6F94 /* Assets.xcassets */,
 				92F68C4C2BE9DE21009D6F94 /* Preview Content */,
 				92F68C702BE9DF14009D6F94 /* HealthCareModel.swift */,
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0150D8B32BEF58A900024CBB /* HomeView.swift in Sources */,
 				0150D8B12BEF294500024CBB /* HealthCareDataModel.xcdatamodeld in Sources */,
 				92F68C492BE9DE1D009D6F94 /* ContentView.swift in Sources */,
 				92A7C75C2BEE46620052A4B7 /* BookAppointmentView.swift in Sources */,

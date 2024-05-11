@@ -42,7 +42,22 @@ class AppointmentViewModel: ObservableObject {
         }
     }
 
-
+    // Function to delete appointment
+    func deleteAppointment(id: UUID) {
+        let context = healthCareDataViewModel.container.viewContext
+        let request: NSFetchRequest<AppointmentEntity> = AppointmentEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "appointmentID == %@", id as CVarArg)
+        
+        do {
+            if let appointmentEntity = try context.fetch(request).first {
+                context.delete(appointmentEntity)
+                try context.save()
+                fetchAppointments() // Refresh appointments after deletion
+            }
+        } catch {
+            errorMessage = "Failed to delete appointment: \(error.localizedDescription)"
+        }
+    }
 
     // Function to fetch appointments
     func fetchAppointments() {
@@ -66,6 +81,4 @@ class AppointmentViewModel: ObservableObject {
             print(errorMessage ?? "Unknown error occurred while fetching appointments")
         }
     }
-
-
 }
