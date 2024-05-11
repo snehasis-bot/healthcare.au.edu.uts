@@ -16,8 +16,19 @@ struct AppointmentView: View {
                 Text(errorMessage)
                     .foregroundColor(.red)
             } else {
-                List(appointmentViewModel.appointments, id: \.id) { appointment in
-                    AppointmentRow(appointment: appointment)
+                ScrollView {
+                    VStack {
+                        ForEach(appointmentViewModel.appointments, id: \.id) { appointment in
+                            AppointmentRow(appointment: appointment)
+                        }
+                        .onDelete { indexSet in
+                            // Delete appointments when delete button is tapped
+                            indexSet.forEach { index in
+                                let appointment = appointmentViewModel.appointments[index]
+                                appointmentViewModel.deleteAppointment(id: appointment.id)
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -33,17 +44,23 @@ struct AppointmentRow: View {
     let appointment: Appointment
 
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Patient: \(appointment.patientName)")
-                .foregroundColor(.black) // Set text color to black
-            Text("Date: \(appointment.date)")
-                .foregroundColor(.black) // Set text color to black
-            Text("Clinic Address: \(appointment.clinicAddress)")
-                .foregroundColor(.black) // Set text color to black
+        HStack {
+            VStack(alignment: .leading) {
+                Text("Patient: \(appointment.patientName)")
+                Text("Date: \(appointment.date)")
+                Text("Clinic Address: \(appointment.clinicAddress)")
+            }
+            Spacer()
+            Image(systemName: "trash")
+                .foregroundColor(.red)
+                .onTapGesture {
+                    // Handle delete action
+                    // You can implement your delete logic here if needed
+                }
         }
+        .padding()
     }
 }
-
 
 struct AppointmentView_Previews: PreviewProvider {
     static var previews: some View {

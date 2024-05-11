@@ -1,45 +1,54 @@
-import SwiftUI
-
 
 import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var appointmentViewModel: AppointmentViewModel
-    @State private var isBookingAppointment = false
+    @State private var selectedTab = 0
 
     var body: some View {
         NavigationView {
             VStack {
-                Text("Welcome to the Healthcare Booking App")
-                    .font(.title)
-                    .padding()
-
-                
-                Spacer()
-                
-                HStack {
-                    NavigationLink(destination: ContentView(appointmentViewModel: appointmentViewModel)) {
-                        Image(systemName: "house")
-                            .font(.title)
-                            .padding()
-                    }
-                    
-                    
-                    NavigationLink(destination: BookAppointmentView(appointmentViewModel: appointmentViewModel, isBookingAppointment: $isBookingAppointment)) {
-                        Image(systemName: "calendar.badge.plus")
-                            .font(.title)
-                            .padding()
-                    }
-                    
-                    NavigationLink(destination: AppointmentView(appointmentViewModel: appointmentViewModel)) {
-                        Image(systemName: "list.bullet")
-                            .font(.title)
-                            .padding()
-                    }
+                if selectedTab == 0 {
+                    HomeView()
+                } else if selectedTab == 1 {
+                    BookAppointmentView(appointmentViewModel: appointmentViewModel)
+                } else {
+                    AppointmentView(appointmentViewModel: appointmentViewModel)
                 }
-                .padding(.horizontal)
+                Spacer()
+                navButtons
             }
-            .navigationTitle("HBA")
+            .navigationBarTitle("HBA")
+        }
+    }
+
+    var navButtons: some View {
+        HStack {
+            Spacer()
+            
+            Button(action: { selectedTab = 0 }) {
+                Image(systemName: "house")
+                    .font(.system(size: 28))
+            }
+            .padding(.trailing, 20)
+            
+            Spacer()
+            
+            Button(action: { selectedTab = 1 }) {
+                Image(systemName: "calendar.badge.plus")
+                    .font(.system(size: 28))
+            }
+            .padding(.horizontal, 20)
+            
+            Spacer()
+            
+            Button(action: { selectedTab = 2 }) {
+                Image(systemName: "list.bullet")
+                    .font(.system(size: 28))
+            }
+            .padding(.leading, 20)
+            
+            Spacer()
         }
     }
 }
