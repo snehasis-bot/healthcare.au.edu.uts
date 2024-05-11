@@ -14,15 +14,6 @@ struct ContentView: View {
                     .font(.title)
                     .padding()
 
-                if !isBookingAppointment {
-                    AppointmentView(appointmentViewModel: appointmentViewModel)
-                        .environmentObject(appointmentViewModel)
-                } else {
-                    BookAppointmentView(appointmentViewModel: appointmentViewModel, isBookingAppointment: $isBookingAppointment)
-                        .onDisappear {
-                            isBookingAppointment = false
-                        }
-                }
                 
                 Spacer()
                 

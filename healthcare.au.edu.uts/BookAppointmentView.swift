@@ -13,7 +13,8 @@ struct BookAppointmentView: View {
     @State private var clinicAddress: String = ""
     @State private var date = Date()
     @Binding var isBookingAppointment: Bool
-
+    @State private var showAlert = false // State variable to control the alert
+    
     var body: some View {
         Form {
             TextField("Patient Name", text: $patientName)
@@ -23,9 +24,23 @@ struct BookAppointmentView: View {
                 appointmentViewModel.bookAppointment(patientName: patientName, clinicAddress: clinicAddress, date: date)
                 // Set isBookingAppointment to false to navigate back to AppointmentView
                 isBookingAppointment = false
+                showAlert = true // Show the alert
             }
         }
         .navigationTitle("Book Appointment")
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Appointment Booked"),
+                message: Text("Your appointment has been successfully booked."),
+                primaryButton: .default(
+                    Text("OK"),
+                    action: {
+                        // Handle OK button action if needed
+                    }
+                ),
+                secondaryButton: .cancel()
+            )
+        }
     }
 }
 
