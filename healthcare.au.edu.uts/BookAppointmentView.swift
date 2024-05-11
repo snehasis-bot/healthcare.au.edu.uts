@@ -29,6 +29,7 @@ struct BookAppointmentView: View {
     }
 }
 
+
 struct BookAppointmentView_Previews: PreviewProvider {
     static var previews: some View {
         let healthCareDataViewModel = HealthCareDataViewModel()

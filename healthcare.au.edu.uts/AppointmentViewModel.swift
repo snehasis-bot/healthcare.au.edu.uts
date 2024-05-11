@@ -25,7 +25,11 @@ class AppointmentViewModel: ObservableObject {
         // Create AppointmentEntity and save it to CoreData
         let context = healthCareDataViewModel.container.viewContext
         let newAppointment = AppointmentEntity(context: context)
-        newAppointment.objectID // Accessing objectID to avoid 'id' error
+        
+        // Generate a unique ID
+        let appointmentID = UUID()
+        
+        newAppointment.appointmentID = appointmentID // Assign the unique ID
         newAppointment.patientName = patientName
         newAppointment.clinicAddress = clinicAddress
         newAppointment.date = date
@@ -37,6 +41,8 @@ class AppointmentViewModel: ObservableObject {
             errorMessage = "Failed to book appointment."
         }
     }
+
+
 
     // Function to fetch appointments
     func fetchAppointments() {

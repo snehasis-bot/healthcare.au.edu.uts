@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		92A7C7582BEE3B140052A4B7 /* HealthCareDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92A7C7562BEE3B140052A4B7 /* HealthCareDataModel.xcdatamodeld */; };
+		0150D8B12BEF294500024CBB /* HealthCareDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0150D8AF2BEF294500024CBB /* HealthCareDataModel.xcdatamodeld */; };
 		92A7C75A2BEE3BB30052A4B7 /* HealthCareDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7C7592BEE3BB30052A4B7 /* HealthCareDataViewModel.swift */; };
 		92A7C75C2BEE46620052A4B7 /* BookAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7C75B2BEE46620052A4B7 /* BookAppointmentView.swift */; };
 		92F68C472BE9DE1D009D6F94 /* healthcare_au_edu_utsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F68C462BE9DE1D009D6F94 /* healthcare_au_edu_utsApp.swift */; };
@@ -20,7 +20,6 @@
 		92F68C712BE9DF14009D6F94 /* HealthCareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F68C702BE9DF14009D6F94 /* HealthCareModel.swift */; };
 		92F68C732BE9E16F009D6F94 /* AppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F68C722BE9E16F009D6F94 /* AppointmentView.swift */; };
 		92F68C752BE9E27A009D6F94 /* AppointmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F68C742BE9E27A009D6F94 /* AppointmentViewModel.swift */; };
-		92F68C772BE9E378009D6F94 /* AppointmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F68C762BE9E377009D6F94 /* AppointmentService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		92A7C7572BEE3B140052A4B7 /* HealthCareDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HealthCareDataModel.xcdatamodel; sourceTree = "<group>"; };
+		0150D8B02BEF294500024CBB /* HealthCareDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HealthCareDataModel.xcdatamodel; sourceTree = "<group>"; };
 		92A7C7592BEE3BB30052A4B7 /* HealthCareDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCareDataViewModel.swift; sourceTree = "<group>"; };
 		92A7C75B2BEE46620052A4B7 /* BookAppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAppointmentView.swift; sourceTree = "<group>"; };
 		92F68C432BE9DE1D009D6F94 /* healthcare.au.edu.uts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = healthcare.au.edu.uts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +56,6 @@
 		92F68C702BE9DF14009D6F94 /* HealthCareModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCareModel.swift; sourceTree = "<group>"; };
 		92F68C722BE9E16F009D6F94 /* AppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentView.swift; sourceTree = "<group>"; };
 		92F68C742BE9E27A009D6F94 /* AppointmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewModel.swift; sourceTree = "<group>"; };
-		92F68C762BE9E377009D6F94 /* AppointmentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,10 +111,9 @@
 				92F68C4A2BE9DE21009D6F94 /* Assets.xcassets */,
 				92F68C4C2BE9DE21009D6F94 /* Preview Content */,
 				92F68C702BE9DF14009D6F94 /* HealthCareModel.swift */,
+				0150D8AF2BEF294500024CBB /* HealthCareDataModel.xcdatamodeld */,
 				92F68C722BE9E16F009D6F94 /* AppointmentView.swift */,
 				92F68C742BE9E27A009D6F94 /* AppointmentViewModel.swift */,
-				92F68C762BE9E377009D6F94 /* AppointmentService.swift */,
-				92A7C7562BEE3B140052A4B7 /* HealthCareDataModel.xcdatamodeld */,
 				92A7C7592BEE3BB30052A4B7 /* HealthCareDataViewModel.swift */,
 				92A7C75B2BEE46620052A4B7 /* BookAppointmentView.swift */,
 			);
@@ -278,13 +275,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92A7C7582BEE3B140052A4B7 /* HealthCareDataModel.xcdatamodeld in Sources */,
+				0150D8B12BEF294500024CBB /* HealthCareDataModel.xcdatamodeld in Sources */,
 				92F68C492BE9DE1D009D6F94 /* ContentView.swift in Sources */,
 				92A7C75C2BEE46620052A4B7 /* BookAppointmentView.swift in Sources */,
 				92F68C752BE9E27A009D6F94 /* AppointmentViewModel.swift in Sources */,
 				92F68C712BE9DF14009D6F94 /* HealthCareModel.swift in Sources */,
 				92A7C75A2BEE3BB30052A4B7 /* HealthCareDataViewModel.swift in Sources */,
-				92F68C772BE9E378009D6F94 /* AppointmentService.swift in Sources */,
 				92F68C732BE9E16F009D6F94 /* AppointmentView.swift in Sources */,
 				92F68C472BE9DE1D009D6F94 /* healthcare_au_edu_utsApp.swift in Sources */,
 			);
@@ -612,14 +608,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		92A7C7562BEE3B140052A4B7 /* HealthCareDataModel.xcdatamodeld */ = {
+		0150D8AF2BEF294500024CBB /* HealthCareDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				92A7C7572BEE3B140052A4B7 /* HealthCareDataModel.xcdatamodel */,
+				0150D8B02BEF294500024CBB /* HealthCareDataModel.xcdatamodel */,
 			);
-			currentVersion = 92A7C7572BEE3B140052A4B7 /* HealthCareDataModel.xcdatamodel */;
+			currentVersion = 0150D8B02BEF294500024CBB /* HealthCareDataModel.xcdatamodel */;
 			name = HealthCareDataModel.xcdatamodeld;
-			path = "/Users/24594424/Downloads/healthcare.au.edu.uts 2/healthcare.au.edu.uts/HealthCareDataModel.xcdatamodeld";
+			path = /Users/kushmali/Desktop/Snehasis/healthcare.au.edu.uts/healthcare.au.edu.uts/HealthCareDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
