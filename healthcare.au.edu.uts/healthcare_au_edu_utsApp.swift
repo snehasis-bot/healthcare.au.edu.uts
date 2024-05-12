@@ -10,10 +10,11 @@ import SwiftUI
 @main
 struct healthcare_au_edu_utsApp: App {
     let healthCareDataViewModel = HealthCareDataViewModel()
+    let doctorSearchViewModel = DoctorSearchViewModel()
     let appointmentViewModel: AppointmentViewModel
 
     init() {
-        appointmentViewModel = AppointmentViewModel(healthCareDataViewModel: healthCareDataViewModel)
+        appointmentViewModel = AppointmentViewModel(healthCareDataViewModel: healthCareDataViewModel,doctorSearchViewModel: doctorSearchViewModel)
     }
 
     var body: some Scene {

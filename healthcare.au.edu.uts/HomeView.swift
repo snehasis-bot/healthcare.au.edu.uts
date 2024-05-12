@@ -9,12 +9,32 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text("Welcome to the Healthcare Booking App")
+        NavigationView {
+            VStack {
+                Text("Welcome to the Healthcare Booking App")
                     .font(.title)
                     .padding()
+                
+                // Create an instance of AppointmentViewModel
+                let appointmentViewModel = AppointmentViewModel(healthCareDataViewModel: HealthCareDataViewModel(), doctorSearchViewModel: DoctorSearchViewModel())
+                
+                // Button to navigate to DoctorSearchView
+                NavigationLink(destination: DoctorSearchView(appointmentViewModel: appointmentViewModel)) {
+                    Text("Find Practitioner")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
+                .padding()
+            }
+        }
     }
 }
 
-#Preview {
-    HomeView()
+
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
+    }
 }

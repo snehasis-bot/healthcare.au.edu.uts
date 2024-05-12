@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0150D8B12BEF294500024CBB /* HealthCareDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0150D8AF2BEF294500024CBB /* HealthCareDataModel.xcdatamodeld */; };
 		0150D8B32BEF58A900024CBB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150D8B22BEF58A900024CBB /* HomeView.swift */; };
+		0150D8B52BEF93FD00024CBB /* DoctorData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0150D8B42BEF93FD00024CBB /* DoctorData.json */; };
+		0150D8C62BF11C5B00024CBB /* DoctorSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150D8C52BF11C5B00024CBB /* DoctorSearchView.swift */; };
+		0150D8C82BF1218D00024CBB /* DoctorSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0150D8C72BF1218D00024CBB /* DoctorSearchViewModel.swift */; };
 		92A7C75A2BEE3BB30052A4B7 /* HealthCareDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7C7592BEE3BB30052A4B7 /* HealthCareDataViewModel.swift */; };
 		92A7C75C2BEE46620052A4B7 /* BookAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7C75B2BEE46620052A4B7 /* BookAppointmentView.swift */; };
 		92F68C472BE9DE1D009D6F94 /* healthcare_au_edu_utsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F68C462BE9DE1D009D6F94 /* healthcare_au_edu_utsApp.swift */; };
@@ -43,16 +46,19 @@
 /* Begin PBXFileReference section */
 		0150D8B02BEF294500024CBB /* HealthCareDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HealthCareDataModel.xcdatamodel; sourceTree = "<group>"; };
 		0150D8B22BEF58A900024CBB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0150D8B42BEF93FD00024CBB /* DoctorData.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = DoctorData.json; sourceTree = "<group>"; };
+		0150D8C52BF11C5B00024CBB /* DoctorSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorSearchView.swift; sourceTree = "<group>"; };
+		0150D8C72BF1218D00024CBB /* DoctorSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorSearchViewModel.swift; sourceTree = "<group>"; };
 		92A7C7592BEE3BB30052A4B7 /* HealthCareDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCareDataViewModel.swift; sourceTree = "<group>"; };
 		92A7C75B2BEE46620052A4B7 /* BookAppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAppointmentView.swift; sourceTree = "<group>"; };
-		92F68C432BE9DE1D009D6F94 /* healthcare.au.edu.uts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = healthcare.au.edu.uts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92F68C432BE9DE1D009D6F94 /* healthcare.au.edu.uts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = healthcare.au.edu.uts.app; path = "/Users/kushmali/Desktop/Snehasis/healthcare.au.edu.uts/build/Debug-iphoneos/healthcare.au.edu.uts.app"; sourceTree = "<absolute>"; };
 		92F68C462BE9DE1D009D6F94 /* healthcare_au_edu_utsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthcare_au_edu_utsApp.swift; sourceTree = "<group>"; };
 		92F68C482BE9DE1D009D6F94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		92F68C4A2BE9DE21009D6F94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92F68C4D2BE9DE21009D6F94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		92F68C532BE9DE25009D6F94 /* healthcare.au.edu.utsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = healthcare.au.edu.utsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92F68C532BE9DE25009D6F94 /* healthcare.au.edu.utsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = healthcare.au.edu.utsTests.xctest; path = "/Users/kushmali/Desktop/Snehasis/healthcare.au.edu.uts/build/Debug-iphoneos/healthcare.au.edu.uts.app/PlugIns/healthcare.au.edu.utsTests.xctest"; sourceTree = "<absolute>"; };
 		92F68C572BE9DE25009D6F94 /* healthcare_au_edu_utsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthcare_au_edu_utsTests.swift; sourceTree = "<group>"; };
-		92F68C5D2BE9DE25009D6F94 /* healthcare.au.edu.utsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = healthcare.au.edu.utsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92F68C5D2BE9DE25009D6F94 /* healthcare.au.edu.utsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = healthcare.au.edu.utsUITests.xctest; path = "/Users/kushmali/Desktop/Snehasis/healthcare.au.edu.uts/build/Debug-iphoneos/healthcare.au.edu.utsUITests-Runner.app/PlugIns/healthcare.au.edu.utsUITests.xctest"; sourceTree = "<absolute>"; };
 		92F68C612BE9DE25009D6F94 /* healthcare_au_edu_utsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthcare_au_edu_utsUITests.swift; sourceTree = "<group>"; };
 		92F68C632BE9DE25009D6F94 /* healthcare_au_edu_utsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthcare_au_edu_utsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		92F68C702BE9DF14009D6F94 /* HealthCareModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCareModel.swift; sourceTree = "<group>"; };
@@ -85,24 +91,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0150D8B62BEFB20300024CBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		92F68C3A2BE9DE1D009D6F94 = {
 			isa = PBXGroup;
 			children = (
 				92F68C452BE9DE1D009D6F94 /* healthcare.au.edu.uts */,
 				92F68C562BE9DE25009D6F94 /* healthcare.au.edu.utsTests */,
 				92F68C602BE9DE25009D6F94 /* healthcare.au.edu.utsUITests */,
-				92F68C442BE9DE1D009D6F94 /* Products */,
+				0150D8B62BEFB20300024CBB /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		92F68C442BE9DE1D009D6F94 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				92F68C432BE9DE1D009D6F94 /* healthcare.au.edu.uts.app */,
-				92F68C532BE9DE25009D6F94 /* healthcare.au.edu.utsTests.xctest */,
-				92F68C5D2BE9DE25009D6F94 /* healthcare.au.edu.utsUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		92F68C452BE9DE1D009D6F94 /* healthcare.au.edu.uts */ = {
@@ -110,6 +113,7 @@
 			children = (
 				92F68C462BE9DE1D009D6F94 /* healthcare_au_edu_utsApp.swift */,
 				92F68C482BE9DE1D009D6F94 /* ContentView.swift */,
+				0150D8B42BEF93FD00024CBB /* DoctorData.json */,
 				0150D8B22BEF58A900024CBB /* HomeView.swift */,
 				92F68C4A2BE9DE21009D6F94 /* Assets.xcassets */,
 				92F68C4C2BE9DE21009D6F94 /* Preview Content */,
@@ -119,6 +123,8 @@
 				92F68C742BE9E27A009D6F94 /* AppointmentViewModel.swift */,
 				92A7C7592BEE3BB30052A4B7 /* HealthCareDataViewModel.swift */,
 				92A7C75B2BEE46620052A4B7 /* BookAppointmentView.swift */,
+				0150D8C52BF11C5B00024CBB /* DoctorSearchView.swift */,
+				0150D8C72BF1218D00024CBB /* DoctorSearchViewModel.swift */,
 			);
 			path = healthcare.au.edu.uts;
 			sourceTree = "<group>";
@@ -164,6 +170,8 @@
 			dependencies = (
 			);
 			name = healthcare.au.edu.uts;
+			packageProductDependencies = (
+			);
 			productName = healthcare.au.edu.uts;
 			productReference = 92F68C432BE9DE1D009D6F94 /* healthcare.au.edu.uts.app */;
 			productType = "com.apple.product-type.application";
@@ -236,7 +244,11 @@
 				Base,
 			);
 			mainGroup = 92F68C3A2BE9DE1D009D6F94;
-			productRefGroup = 92F68C442BE9DE1D009D6F94 /* Products */;
+			packageReferences = (
+				0150D8B72BEFB6A100024CBB /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+				0150D8C22BEFC3E700024CBB /* XCRemoteSwiftPackageReference "ios-places-sdk" */,
+			);
+			productRefGroup = 92F68C3A2BE9DE1D009D6F94;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -253,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92F68C4E2BE9DE21009D6F94 /* Preview Assets.xcassets in Resources */,
+				0150D8B52BEF93FD00024CBB /* DoctorData.json in Resources */,
 				92F68C4B2BE9DE21009D6F94 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,8 +292,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0150D8B32BEF58A900024CBB /* HomeView.swift in Sources */,
+				0150D8C62BF11C5B00024CBB /* DoctorSearchView.swift in Sources */,
 				0150D8B12BEF294500024CBB /* HealthCareDataModel.xcdatamodeld in Sources */,
 				92F68C492BE9DE1D009D6F94 /* ContentView.swift in Sources */,
+				0150D8C82BF1218D00024CBB /* DoctorSearchViewModel.swift in Sources */,
 				92A7C75C2BEE46620052A4B7 /* BookAppointmentView.swift in Sources */,
 				92F68C752BE9E27A009D6F94 /* AppointmentViewModel.swift in Sources */,
 				92F68C712BE9DF14009D6F94 /* HealthCareModel.swift in Sources */,
@@ -610,6 +625,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0150D8B72BEFB6A100024CBB /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.4.0;
+			};
+		};
+		0150D8C22BEFC3E700024CBB /* XCRemoteSwiftPackageReference "ios-places-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-places-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCVersionGroup section */
 		0150D8AF2BEF294500024CBB /* HealthCareDataModel.xcdatamodeld */ = {

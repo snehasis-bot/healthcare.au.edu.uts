@@ -4,6 +4,7 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var appointmentViewModel: AppointmentViewModel
     @State private var selectedTab = 0
+    @State private var selectedDoctor: Doctor? = nil
 
     var body: some View {
         NavigationView {
@@ -11,7 +12,11 @@ struct ContentView: View {
                 if selectedTab == 0 {
                     HomeView()
                 } else if selectedTab == 1 {
-                    BookAppointmentView(appointmentViewModel: appointmentViewModel)
+                    if let doctor = selectedDoctor {
+                        BookAppointmentView(appointmentViewModel: appointmentViewModel, doctor: doctor)
+                    } else {
+                        Text("No doctor selected") // Placeholder or handle the case when no doctor is selected
+                    }
                 } else {
                     AppointmentView(appointmentViewModel: appointmentViewModel)
                 }
@@ -57,7 +62,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let healthCareDataViewModel = HealthCareDataViewModel()
-        let appointmentViewModel = AppointmentViewModel(healthCareDataViewModel: healthCareDataViewModel)
+        let doctorSearchViewModel = DoctorSearchViewModel()
+        let appointmentViewModel = AppointmentViewModel(healthCareDataViewModel: healthCareDataViewModel, doctorSearchViewModel: doctorSearchViewModel)
         
         return ContentView(appointmentViewModel: appointmentViewModel)
     }

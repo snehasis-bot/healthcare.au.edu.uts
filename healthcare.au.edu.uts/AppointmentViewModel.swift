@@ -9,19 +9,21 @@ import Foundation
 import CoreData
 
 class AppointmentViewModel: ObservableObject {
-    // Injecting the instance of HealthCareDataViewModel
+    
     let healthCareDataViewModel: HealthCareDataViewModel
+    let doctorSearchViewModel: DoctorSearchViewModel
     
     @Published var appointments: [Appointment] = []
     @Published var errorMessage: String?
 
     // Initializing with an instance of HealthCareDataViewModel
-    init(healthCareDataViewModel: HealthCareDataViewModel) {
+    init(healthCareDataViewModel: HealthCareDataViewModel, doctorSearchViewModel: DoctorSearchViewModel) {
         self.healthCareDataViewModel = healthCareDataViewModel
+        self.doctorSearchViewModel = doctorSearchViewModel
     }
 
     // Function to book appointment
-    func bookAppointment(patientName: String, clinicAddress: String, date: Date) {
+    func bookAppointment(patientName: String, clinicAddress: String, date: Date, doctorName: String, age: Int16, gender: String) {
         // Create AppointmentEntity and save it to CoreData
         let context = healthCareDataViewModel.container.viewContext
         let newAppointment = AppointmentEntity(context: context)
@@ -33,6 +35,9 @@ class AppointmentViewModel: ObservableObject {
         newAppointment.patientName = patientName
         newAppointment.clinicAddress = clinicAddress
         newAppointment.date = date
+        newAppointment.doctorName = doctorName
+        newAppointment.age = age
+        newAppointment.gender = gender
 
         do {
             try context.save()
@@ -51,6 +56,7 @@ class AppointmentViewModel: ObservableObject {
         do {
             if let appointmentEntity = try context.fetch(request).first {
                 context.delete(appointmentEntity)
+                print("Deleted Appointment: \(appointmentEntity)")
                 try context.save()
                 fetchAppointments() // Refresh appointments after deletion
             }
@@ -68,8 +74,8 @@ class AppointmentViewModel: ObservableObject {
             // Convert fetched AppointmentEntity objects to Appointment objects
             appointments = appointmentsFromCoreData.compactMap { appointmentEntity in
                 if let id = appointmentEntity.appointmentID {
-                    let appointment = Appointment(id: id, patientName: appointmentEntity.patientName ?? "", date: appointmentEntity.date ?? Date(), clinicAddress: appointmentEntity.clinicAddress ?? "")
-                    print("Fetched Appointment: \(appointment)")
+                    let appointment = Appointment(id: id, patientName: appointmentEntity.patientName ?? "", date: appointmentEntity.date ?? Date(), clinicAddress: appointmentEntity.clinicAddress ?? "", gender: appointmentEntity.gender ?? "", age: appointmentEntity.age ?? Int16(), doctorName: appointmentEntity.doctorName ?? "")
+                   // print("Fetched Appointment: \(appointment)")
                     return appointment
                 }
                 // Handle error case where conversion fails

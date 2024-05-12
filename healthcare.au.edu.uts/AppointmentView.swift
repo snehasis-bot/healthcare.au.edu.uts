@@ -54,6 +54,7 @@ struct AppointmentRow: View {
             Image(systemName: "trash")
                 .foregroundColor(.red)
                 .onTapGesture {
+                    print("Delete button tapped for appointment ID: \(appointment.id)")
                     // Handle delete action
                     // You can implement your delete logic here if needed
                 }
@@ -65,10 +66,10 @@ struct AppointmentRow: View {
 struct AppointmentView_Previews: PreviewProvider {
     static var previews: some View {
         // Create a sample appointment view model with dummy data
-        let dummyViewModel = AppointmentViewModel(healthCareDataViewModel: HealthCareDataViewModel())
+        let dummyViewModel = AppointmentViewModel(healthCareDataViewModel: HealthCareDataViewModel(), doctorSearchViewModel: DoctorSearchViewModel())
         let dummyAppointments: [Appointment] = [
-            Appointment(id: UUID(), patientName: "John Doe", date: Date(), clinicAddress: "123 Main St"),
-            Appointment(id: UUID(), patientName: "Jane Smith", date: Date(), clinicAddress: "456 Elm St")
+            Appointment(id: UUID(), patientName: "John Doe", date: Date(), clinicAddress: "123 Main St", gender: "M", age: 10, doctorName: "X"),
+            Appointment(id: UUID(), patientName: "Jane Smith", date: Date(), clinicAddress: "456 Elm St",gender: "M", age: 10, doctorName: "Y")
         ]
         dummyViewModel.appointments = dummyAppointments
         
