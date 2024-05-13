@@ -49,16 +49,17 @@
 		0150D8B42BEF93FD00024CBB /* DoctorData.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = DoctorData.json; sourceTree = "<group>"; };
 		0150D8C52BF11C5B00024CBB /* DoctorSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorSearchView.swift; sourceTree = "<group>"; };
 		0150D8C72BF1218D00024CBB /* DoctorSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorSearchViewModel.swift; sourceTree = "<group>"; };
+		01F60C792BF1B948005AD3EB /* healthcare.au.edu.uts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = healthcare.au.edu.uts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01F60C7A2BF1B948005AD3EB /* healthcare.au.edu.utsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = healthcare.au.edu.utsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01F60C7B2BF1B948005AD3EB /* healthcare.au.edu.utsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = healthcare.au.edu.utsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01F60C7C2BF1BAD3005AD3EB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../../Kajal/.gitignore; sourceTree = "<group>"; };
 		92A7C7592BEE3BB30052A4B7 /* HealthCareDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCareDataViewModel.swift; sourceTree = "<group>"; };
 		92A7C75B2BEE46620052A4B7 /* BookAppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAppointmentView.swift; sourceTree = "<group>"; };
-		92F68C432BE9DE1D009D6F94 /* healthcare.au.edu.uts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = healthcare.au.edu.uts.app; path = "/Users/kushmali/Desktop/Snehasis/healthcare.au.edu.uts/build/Debug-iphoneos/healthcare.au.edu.uts.app"; sourceTree = "<absolute>"; };
 		92F68C462BE9DE1D009D6F94 /* healthcare_au_edu_utsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthcare_au_edu_utsApp.swift; sourceTree = "<group>"; };
 		92F68C482BE9DE1D009D6F94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		92F68C4A2BE9DE21009D6F94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92F68C4D2BE9DE21009D6F94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		92F68C532BE9DE25009D6F94 /* healthcare.au.edu.utsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = healthcare.au.edu.utsTests.xctest; path = "/Users/kushmali/Desktop/Snehasis/healthcare.au.edu.uts/build/Debug-iphoneos/healthcare.au.edu.uts.app/PlugIns/healthcare.au.edu.utsTests.xctest"; sourceTree = "<absolute>"; };
 		92F68C572BE9DE25009D6F94 /* healthcare_au_edu_utsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthcare_au_edu_utsTests.swift; sourceTree = "<group>"; };
-		92F68C5D2BE9DE25009D6F94 /* healthcare.au.edu.utsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = healthcare.au.edu.utsUITests.xctest; path = "/Users/kushmali/Desktop/Snehasis/healthcare.au.edu.uts/build/Debug-iphoneos/healthcare.au.edu.utsUITests-Runner.app/PlugIns/healthcare.au.edu.utsUITests.xctest"; sourceTree = "<absolute>"; };
 		92F68C612BE9DE25009D6F94 /* healthcare_au_edu_utsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthcare_au_edu_utsUITests.swift; sourceTree = "<group>"; };
 		92F68C632BE9DE25009D6F94 /* healthcare_au_edu_utsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthcare_au_edu_utsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		92F68C702BE9DF14009D6F94 /* HealthCareModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCareModel.swift; sourceTree = "<group>"; };
@@ -101,10 +102,14 @@
 		92F68C3A2BE9DE1D009D6F94 = {
 			isa = PBXGroup;
 			children = (
+				01F60C7C2BF1BAD3005AD3EB /* .gitignore */,
 				92F68C452BE9DE1D009D6F94 /* healthcare.au.edu.uts */,
 				92F68C562BE9DE25009D6F94 /* healthcare.au.edu.utsTests */,
 				92F68C602BE9DE25009D6F94 /* healthcare.au.edu.utsUITests */,
 				0150D8B62BEFB20300024CBB /* Frameworks */,
+				01F60C792BF1B948005AD3EB /* healthcare.au.edu.uts.app */,
+				01F60C7A2BF1B948005AD3EB /* healthcare.au.edu.utsTests.xctest */,
+				01F60C7B2BF1B948005AD3EB /* healthcare.au.edu.utsUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,7 +178,7 @@
 			packageProductDependencies = (
 			);
 			productName = healthcare.au.edu.uts;
-			productReference = 92F68C432BE9DE1D009D6F94 /* healthcare.au.edu.uts.app */;
+			productReference = 01F60C792BF1B948005AD3EB /* healthcare.au.edu.uts.app */;
 			productType = "com.apple.product-type.application";
 		};
 		92F68C522BE9DE25009D6F94 /* healthcare.au.edu.utsTests */ = {
@@ -191,7 +196,7 @@
 			);
 			name = healthcare.au.edu.utsTests;
 			productName = healthcare.au.edu.utsTests;
-			productReference = 92F68C532BE9DE25009D6F94 /* healthcare.au.edu.utsTests.xctest */;
+			productReference = 01F60C7A2BF1B948005AD3EB /* healthcare.au.edu.utsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		92F68C5C2BE9DE25009D6F94 /* healthcare.au.edu.utsUITests */ = {
@@ -209,7 +214,7 @@
 			);
 			name = healthcare.au.edu.utsUITests;
 			productName = healthcare.au.edu.utsUITests;
-			productReference = 92F68C5D2BE9DE25009D6F94 /* healthcare.au.edu.utsUITests.xctest */;
+			productReference = 01F60C7B2BF1B948005AD3EB /* healthcare.au.edu.utsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
