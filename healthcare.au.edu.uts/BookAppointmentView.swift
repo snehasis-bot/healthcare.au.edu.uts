@@ -84,6 +84,8 @@ struct BookAppointmentView: View {
             }
         }
         .navigationTitle("Book Appointment")
+        .navigationBarTitleDisplayMode(.inline) // Set navigation title display mode
+        .navigationBarItems(trailing: EmptyView())
         .alert(isPresented: $showAlert) {
             Alert(
                 title: Text("Appointment Booked"),
@@ -91,17 +93,21 @@ struct BookAppointmentView: View {
                 dismissButton: .default(Text("OK"))
             )
         }
+        .font(.title)
     }
     
     private func validatePatientName(_ newValue: String) {
         if newValue.isEmpty {
             validationMessage = "Patient Name cannot be empty"
-        } else if newValue.rangeOfCharacter(from: CharacterSet.letters.inverted) != nil {
-            validationMessage = "Patient Name should contain only alphabets"
+        } else if newValue.rangeOfCharacter(from: CharacterSet.letters.union(CharacterSet.whitespaces).inverted) != nil {
+            validationMessage = "Patient Name should contain only alphabets or spaces"
+        } else if newValue.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            validationMessage = "Patient Name should contain at least one alphabet"
         } else {
             validationMessage = ""
         }
     }
+
     
     private func validatePatientAge(_ newValue: String) {
         if newValue.isEmpty {

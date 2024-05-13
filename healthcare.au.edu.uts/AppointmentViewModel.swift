@@ -56,7 +56,6 @@ class AppointmentViewModel: ObservableObject {
         do {
             if let appointmentEntity = try context.fetch(request).first {
                 context.delete(appointmentEntity)
-                print("Deleted Appointment: \(appointmentEntity)")
                 try context.save()
                 fetchAppointments() // Refresh appointments after deletion
             }

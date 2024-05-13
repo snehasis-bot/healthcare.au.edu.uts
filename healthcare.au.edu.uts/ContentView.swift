@@ -4,26 +4,19 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var appointmentViewModel: AppointmentViewModel
     @State private var selectedTab = 0
-    @State private var selectedDoctor: Doctor? = nil
 
     var body: some View {
         NavigationView {
             VStack {
                 if selectedTab == 0 {
                     HomeView()
-                } else if selectedTab == 1 {
-                    if let doctor = selectedDoctor {
-                        BookAppointmentView(appointmentViewModel: appointmentViewModel, doctor: doctor)
-                    } else {
-                        Text("No doctor selected") // Placeholder or handle the case when no doctor is selected
-                    }
                 } else {
                     AppointmentView(appointmentViewModel: appointmentViewModel)
                 }
                 Spacer()
                 navButtons
             }
-            .navigationBarTitle("HBA")
+           // .navigationBarTitle("HBA")
         }
     }
 
@@ -43,21 +36,12 @@ struct ContentView: View {
                 Image(systemName: "calendar.badge.plus")
                     .font(.system(size: 28))
             }
-            .padding(.horizontal, 20)
-            
-            Spacer()
-            
-            Button(action: { selectedTab = 2 }) {
-                Image(systemName: "list.bullet")
-                    .font(.system(size: 28))
-            }
             .padding(.leading, 20)
             
             Spacer()
         }
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
@@ -68,3 +52,4 @@ struct ContentView_Previews: PreviewProvider {
         return ContentView(appointmentViewModel: appointmentViewModel)
     }
 }
+

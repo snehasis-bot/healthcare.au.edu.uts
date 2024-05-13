@@ -19,19 +19,15 @@ struct AppointmentView: View {
                 ScrollView {
                     VStack {
                         ForEach(appointmentViewModel.appointments, id: \.id) { appointment in
-                            AppointmentRow(appointment: appointment)
-                        }
-                        .onDelete { indexSet in
-                            // Delete appointments when delete button is tapped
-                            indexSet.forEach { index in
-                                let appointment = appointmentViewModel.appointments[index]
+                            AppointmentRow(appointment: appointment, onDelete: {
                                 appointmentViewModel.deleteAppointment(id: appointment.id)
-                            }
+                            })
                         }
                     }
                 }
             }
         }
+        .navigationTitle("Appointments")
         .onAppear {
             // Fetch appointments when the view appears
             appointmentViewModel.fetchAppointments()
@@ -39,9 +35,9 @@ struct AppointmentView: View {
     }
 }
 
-
 struct AppointmentRow: View {
     let appointment: Appointment
+    let onDelete: () -> Void
 
     var body: some View {
         HStack {
@@ -51,17 +47,15 @@ struct AppointmentRow: View {
                 Text("Clinic Address: \(appointment.clinicAddress)")
             }
             Spacer()
-            Image(systemName: "trash")
-                .foregroundColor(.red)
-                .onTapGesture {
-                    print("Delete button tapped for appointment ID: \(appointment.id)")
-                    // Handle delete action
-                    // You can implement your delete logic here if needed
-                }
+            Button(action: onDelete) {
+                Image(systemName: "trash")
+                    .foregroundColor(.red)
+            }
         }
         .padding()
     }
 }
+
 
 struct AppointmentView_Previews: PreviewProvider {
     static var previews: some View {
